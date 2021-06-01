@@ -25,10 +25,12 @@ const Hero = ()=> {
   const [isLoading, setIsLoading] = useState();
 
      const getData = async ()=>{
-         const getIt = await axios.get('/api/animals', {headers:{
-         "Access-Control-Allow-Origin": "*",
-         mode: "cors",               
-}})
+         const getIt = await axios.get('/api/animals'
+//           {headers:{
+//          "Access-Control-Allow-Origin": "*",
+//          mode: "cors",               
+// }}
+)
          setdata(getIt.data);
          setIsLoading(false)
        }
@@ -42,6 +44,7 @@ const Hero = ()=> {
         <Container>
       <Background/>
       <Content data={data} isLoading={isLoading} />
+      <h1>Hellooooo</h1>
        </Container>
     )
 }
