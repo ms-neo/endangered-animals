@@ -44,7 +44,6 @@ const Hero = ()=> {
         <Container>
       <Background/>
       <Content data={data} isLoading={isLoading} />
-      <h1>Hellooooo</h1>
        </Container>
     )
 }
