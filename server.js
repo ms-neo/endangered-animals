@@ -24,7 +24,7 @@ const connectDB = async () => {
     }
 }
 
-connectDB()
+
 
 //set routes
 app.use('/api/animals',require('./routes/api/animals')) 
@@ -38,6 +38,8 @@ app.get('*', (req, res) => {
 });
 }
 
-app.listen(PORT, () => {
-    console.log(`the server is working now on port ${PORT}`)
+connectDB().then(()=>{
+    app.listen(PORT, () => {
+        console.log(`the server is working now on port ${PORT}`)
+    })
 })
